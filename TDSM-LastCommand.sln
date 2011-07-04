@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDSM-LastCommand", "TDSM-LastCommand\TDSM-LastCommand.csproj", "{5BC25AB6-8A1F-43F0-855E-2AACE0C784D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BC25AB6-8A1F-43F0-855E-2AACE0C784D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC25AB6-8A1F-43F0-855E-2AACE0C784D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC25AB6-8A1F-43F0-855E-2AACE0C784D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC25AB6-8A1F-43F0-855E-2AACE0C784D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = TDSM-LastCommand\TDSM-LastCommand.csproj
+		Policies = $0
+		$0.StandardHeader = $1
+		$1.Text = 
+		$1.IncludeInNewFiles = True
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.BeforeMethodDeclarationParentheses = False
+		$3.BeforeMethodCallParentheses = False
+		$3.BeforeConstructorDeclarationParentheses = False
+		$3.BeforeIndexerDeclarationBracket = False
+		$3.BeforeDelegateDeclarationParentheses = False
+		$3.NewParentheses = False
+		$3.SpacesBeforeBrackets = False
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+	EndGlobalSection
+EndGlobal
