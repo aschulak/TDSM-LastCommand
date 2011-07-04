@@ -17,8 +17,8 @@ namespace LastCommand
 			Name = "LastCommand";
 			Description = "Execute last command with a shortcut";
 			Author = "Envoy"; // see credits above, most of this is borrowed
-			Version = "1.0.0";
-			TDSMBuild = 16;
+			Version = "1.0.1";
+			TDSMBuild = 19;
          
 			Log("version " + base.Version + " Loading...");         
             
@@ -49,26 +49,26 @@ namespace LastCommand
 				return;
 			}
          
-			string[] commands = Event.getMessage().ToLower().Split(' '); //Split into sections (to lower case to work with it better)
+			string[] commands = Event.Message.ToLower().Split(' '); //Split into sections (to lower case to work with it better)
                      
 			if (commands.Length > 0) {
 				Log(commands[0]);
 				if (commands[0] != null && commands[0].Trim().Length > 0) { //If it is not nothing, and the string is actually something                  
-					Player sendingPlayer = Event.getPlayer();
+					Player sendingPlayer = Event.Player;
 					PlayerCommandEvent lastEvent = null;
 					lastEventByPlayer.TryGetValue(sendingPlayer.getName(), out lastEvent);                 
                      
 					if (commands[0].Equals("/!")) {                        
 						if (lastEvent != null) {
-							Log("Executing last event: [" + lastEvent.getMessage() + "]");     
+							Log("Executing last event: [" + lastEvent.Message + "]");     
 							// send it to the natural command parser in case its a built in command
-							Program.commandParser.parsePlayerCommand(sendingPlayer, lastEvent.getMessage());
+							Program.commandParser.parsePlayerCommand(sendingPlayer, lastEvent.Message);
                                                      
 							// send it to the other plugins in case its a plugin command
-							lastEvent.setCancelled(false);
+							lastEvent.Cancelled = false;
 							Program.server.getPluginManager().processHook(Hooks.PLAYER_COMMAND, lastEvent);
                          
-							Event.setCancelled(true);
+							Event.Cancelled = true;
 						}                        
 					} else {                     
 						// store this event
